@@ -1,0 +1,29 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        double b=sc.nextDouble();
+        double hra=0;
+        double da=0;
+        double  gs=0;
+        if(b<15000){
+            hra=0.15*b;
+            da=0.9*b;
+            gs=b+hra+da;
+            System.out.printf("%.2f",gs);
+        }
+        else if(b>=15000){
+            hra=(hra/b)*100;
+            da=0.98*b;
+            gs=b+hra+da;
+            System.out.printf("%.2f",gs);
+        }
+        else{
+            System.out.println();
+        }
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
