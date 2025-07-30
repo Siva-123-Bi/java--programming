@@ -1,0 +1,39 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        String s=sc.next();
+        int num=0;
+        int vol=0;
+        int con=0;
+        int spl=0;
+        for(int i=0;i<s.length();i++){
+            char ch=s.charAt(i);
+            if(ch>=48 && ch<=57){
+                num++;
+            }
+            else if(ch>=65 && ch<=90||ch>=97 && ch<=122)
+            {
+                if(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u' || ch=='A'||ch=='E'||ch=='I'||ch=='O'||ch=='U'){
+                    
+                    vol++;
+                    System.out.println("The Character " +ch +" is Vowel");
+                    
+                }
+                else {
+                    con++;
+                    System.out.println("The Character "+ch +" is Consonant");
+                }
+            }
+           else {
+                spl++;
+                System.out.println();
+            }
+        
+        }
+        
+    }
+}
